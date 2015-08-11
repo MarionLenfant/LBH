@@ -1,6 +1,6 @@
 angular.module('starter')
 
-.controller('chatController',function(){
+.controller('ChatController',function(){
 
 
 

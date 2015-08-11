@@ -1,6 +1,6 @@
 angular.module('starter')
 
-.controller('profileController',function(){
+.controller('ProfileController',function(){
 
 
 });

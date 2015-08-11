@@ -18,3 +18,37 @@ angular.module("starter", ["ionic", "firebase"])
   });
 })
     
+	
+.config(function($stateProvider, $urlRouterProvider) {
+
+  // Ionic uses AngularUI Router which uses the concept of states
+  // Learn more here: https://github.com/angular-ui/ui-router
+  // Set up the various states which the app can be in.
+  // Each state's controller can be found in controllers.js
+  $stateProvider
+  
+    // Each tab has its own nav history stack:
+    .state('login', {
+    url: '/login',
+    views: {
+      'login': {
+        templateUrl: 'templates/login.html',
+        controller: 'LoginController'
+      }
+    }
+  })
+  
+      // Each tab has its own nav history stack:
+    .state('profile', {
+    url: '/profile',
+    views: {
+      'profile': {
+        templateUrl: 'templates/profile.html',
+        controller: 'ProfileController'
+      }
+    }
+  })
+ // if none of the above states are matched, use this as the fallback
+  $urlRouterProvider.otherwise('login');
+
+});
