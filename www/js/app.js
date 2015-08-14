@@ -4,6 +4,8 @@ angular.module('starter', ['ionic'])
 
 .config(function($stateProvider, $urlRouterProvider) {
 
+
+
   $stateProvider
     .state('search', {
       url: '/search',
