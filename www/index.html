@@ -29,6 +29,7 @@
 	
   </head>
   <body ng-app="starter">
+
 	 <ion-side-menus>
         
         <ion-side-menu-content ng-controller="NavCtrl">
@@ -37,7 +38,7 @@
             </ion-nav-back-button>
           
             <ion-nav-buttons side="left">
-              <button class="button button-icon button-clear ion-navicon-round" ng-click="showMenu()">
+              <button class="button button-icon button-clear ion-navicon" ng-click="showMenu()">
               </button>
             </ion-nav-buttons>
 
@@ -83,9 +84,9 @@
         </ion-side-menu>
       
         <ion-side-menu side="right">
-          <ion-header-bar class="bar bar-header bar-dark">
-            <h1 class="title">Paramètre de découverte</h1>
-			 <button class="button button-clear icon ion-android-search"></button>
+          <ion-header-bar align-title="center" class="bar bar-header bar-dark">
+            <h1 class="title">Search settings</h1>
+			 <button disabled="true" class="button button-clear icon ion-android-search"></button>
           </ion-header-bar>
           <ion-content>
             <ul class="list">
@@ -97,42 +98,10 @@
               </li>
             </ul>
           </ion-content>
-        </ion-side-menu>
-        
+        </ion-side-menu>    
       </ion-side-menus>
 
-
-
-    <script id="tabs.html" type="text/ng-template">
-      <ion-tabs class="tabs-icon-top tabs-top tabs-assertive slide-left-right">
-
-        <ion-tab title="Home" icon="ion-home" href="#/tab/home">
-          <ion-nav-view name="home-tab"></ion-nav-view>
-        </ion-tab>
-
-        <ion-tab title="Crush" icon="ion-heart" href="#/tab/about">
-          <ion-nav-view name="about-tab"></ion-nav-view>
-        </ion-tab>
-
-        <ion-tab title="Random" icon="ion-help" ui-sref="tabs.contact">
-          <ion-nav-view name="contact-tab"></ion-nav-view>
-        </ion-tab>
-
-      </ion-tabs>
-    </script>
-
-    <script id="home.html" type="text/ng-template">
-      <ion-view title="Home">
-        <ion-content>
-          <p>Example of Ionic tabs. Navigate to each tab, and
-          navigate to child views of each tab and notice how
-          each tab has its own navigation history.</p>
-          <p>
-            <a class="button icon icon-right ion-chevron-right" href="#/tab/facts">Scientific Facts</a>
-          </p>
-        </ion-content>
-      </ion-view>
-    </script>
+    
 
     <script id="facts.html" type="text/ng-template">
       
@@ -169,18 +138,7 @@
       </ion-view>
     </script>
 
-    <script id="crush.html" type="text/ng-template">
-      <ion-view title="Crush">
-        <ion-content>
-          <h3>Create hybrid mobile apps with the web technologies you love.</h3>
-          <p>Free and open source, Ionic offers a library of mobile-optimized HTML, CSS and JS components for building highly interactive apps.</p>
-          <p>Built with Sass and optimized for AngularJS.</p>
-          <p>
-            <a class="button icon icon-right ion-chevron-right" href="#/tab/navstack">Tabs Nav Stack</a>
-          </p>
-        </ion-content>
-      </ion-view>
-    </script>
+   
 
     <script id="nav-stack.html" type="text/ng-template">
       <ion-view title="Tab Nav Stack">
@@ -190,14 +148,7 @@
       </ion-view>
     </script>
 
-    <script id="random.html" type="text/ng-template">
-      <ion-view title="Random">
-        <ion-content>
-          <p>@IonicFramework</p>
-          <p>@DriftyCo</p>
-        </ion-content>
-      </ion-view>
-    </script>
+   
     
     <script id="settings.html" type="text/ng-template">
       <ion-view title="Settings">

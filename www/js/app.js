@@ -18,13 +18,13 @@ angular.module('starter', ['ionic'])
     .state('tabs', {
       url: "/tab",
       abstract: true,
-      templateUrl: "tabs.html"
+      templateUrl: "templates/tabs.html"
     })
     .state('tabs.home', {
       url: "/home",
       views: {
         'home-tab': {
-          templateUrl: "home.html",
+          templateUrl: "templates/home.html",
           controller: 'HomeTabCtrl'
         }
       }
@@ -45,27 +45,38 @@ angular.module('starter', ['ionic'])
         }
       }
     })
-    .state('tabs.about', {
-      url: "/about",
+	
+	.state('tabs.oneOrAnother', {
+      url: "/oneOrAnother",
       views: {
-        'about-tab': {
-          templateUrl: "crush.html"
+        'home-tab': {
+          templateUrl: "templates/oneOrAnother.html",
+		  controller: 'oneOrAnotherCtrl'
+        }
+      }
+    })
+	
+    .state('tabs.crush', {
+      url: "/crush",
+      views: {
+        'crush-tab': {
+          templateUrl: "templates/crush.html"
         }
       }
     })
     .state('tabs.navstack', {
       url: "/navstack",
       views: {
-        'about-tab': {
+        'crush-tab': {
           templateUrl: "nav-stack.html"
         }
       }
     })
-    .state('tabs.contact', {
-      url: "/contact",
+    .state('tabs.random', {
+      url: "/random",
       views: {
-        'contact-tab': {
-          templateUrl: "random.html"
+        'random-tab': {
+          templateUrl: "templates/random.html"
         }
       }
     });
@@ -82,5 +93,10 @@ angular.module('starter', ['ionic'])
     $ionicSideMenuDelegate.toggleRight();
   };
 })
+
+.controller('oneOrAnotherCtrl', function($scope) {
+ 
+})
+
 .controller('HomeTabCtrl', function($scope) {
 });
